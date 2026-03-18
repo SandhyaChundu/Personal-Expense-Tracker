@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.auth-box, #app {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.dark .auth-box,
+.dark #app {
+    background: #1e1e1e;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background: red;
+    color: white;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.card {
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dark .card {
+    background: #2c2c2c;
+}
+
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+    }
+}

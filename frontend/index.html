@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- AUTH -->
+    <div class="auth-box">
+        <div id="loginBox">
+            <h2>Login</h2>
+            <input id="loginEmail" placeholder="Email">
+            <input id="loginPassword" type="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p onclick="showSignup()">Create account</p>
+        </div>
+
+        <div id="signupBox" style="display:none;">
+            <h2>Signup</h2>
+            <input id="signupName" placeholder="Name">
+            <input id="signupEmail" placeholder="Email">
+            <input id="signupPassword" type="password" placeholder="Password">
+            <button onclick="signup()">Signup</button>
+            <p onclick="showLogin()">Already have account</p>
+        </div>
+    </div>
+
+    <!-- APP -->
+    <div id="app" style="display:none;">
+        <h1>💰 Expense Tracker</h1>
+
+        <button onclick="logout()" class="logout-btn">Logout</button>
+        <button onclick="toggleDarkMode()">🌙</button>
+
+        <!-- FILTERS -->
+        <div class="filters">
+            <input id="filterCategory" placeholder="Category">
+            <input id="filterDate" type="date">
+            <button onclick="applyFilters()">Filter</button>
+        </div>
+
+        <!-- FORM -->
+        <div class="form">
+            <input id="title" placeholder="Title">
+            <input id="amount" type="number" placeholder="Amount">
+            <input id="category" placeholder="Category">
+            <input id="date" type="date">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <h2>Total: ₹<span id="total">0</span></h2>
+
+        <!-- CHART -->
+        <canvas id="expenseChart"></canvas>
+
+        <!-- CARDS -->
+        <div id="expenseList" class="card-list"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
