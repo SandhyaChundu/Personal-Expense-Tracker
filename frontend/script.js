@@ -1,5 +1,5 @@
-const API = "http://localhost:5002/api/expenses";
-const AUTH_API = "http://localhost:5002/api/auth";
+const API = "https://personal-expense-tracker-mc0p.onrender.com/api/expenses";
+const AUTH_API = "https://personal-expense-tracker-mc0p.onrender.com/api/auth";
 
 let token = localStorage.getItem("token");
 let allExpenses = [];
